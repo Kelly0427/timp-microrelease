@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta charset="UTF-8">
+<title>MyTest</title>
+<style>
+.box {
+	width: 48px;
+	height: 48px;
+	position: relative;
+	top: 4%;
+	right: 80%;
+}
+
+.login {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	outline: none;
+	background-color: transparent;
+	border: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+</style>
+<link rel="stylesheet" th:href="@{/css/swiper-3.3.1.min.css}">
+<link rel="stylesheet" th:href="@{/css/public.css}">
+<link rel="stylesheet" th:href="@{/css/style.css?1}">
+<script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+<script
+	th:src="${'http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2865329630'}"
+	type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="warp">
+		<div id="bar" class="bar">
+			<div class="bar_text_warp">
+				<span class="logo"> <img src="" alt="">
+				</span>
+				<div class="line">
+					<div>
+						<a href="javascript:void (0)">首页</a>
+					</div>
+					<div>
+						<a href="javascript:void (0)">视频</a>
+					</div>
+					<div>
+						<a href="/show">发现</a>
+					</div>
+					<div>
+						<a href="javascript:void (0)">消息</a>
+					</div>
+				</div>
+				<form class="sign" action="https://api.weibo.com/oauth2/authorize"
+					method="post">
+					<input name="client_id" value="2865329630" type="hidden" /> <input
+						name="redirect_uri" value="https://www.hbsyzn.com" type="hidden" />
+					<div class="box">
+						<img class="wbimg" src="images/weibo.png" alt=""> <input
+							class="login" type="submit" name="login" value="" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="banner" class="banner">
+			<img src="images/banner.jpg" alt="">
+		</div>
+		<div class="intro">
+			<div class="intro_wrap">
+				<div class="title">
+					<div class="title_content clearfix">
+						<span></span> <span>等待</span> <span></span>
+					</div>
+				</div>
+				<div class="intro_text">
+					<div class="intro_title">木子优阅集</div>
+					<div class="intro_content">
+						夜深了，循着自己的旧梦，在不眠的时光里静静地等待。<br />
+						今日我如随风飘的蒲公英，只能体会那飘零的凄美。我时长安慰自己，虽在风中自由的游走，感受不到甜甜的暖意，然而，我可以等待，等待蒲公英扎根沃土时，在风中飞舞的浪漫。<br />
+						等待的时间总像是失眠的黑夜一样，无助而漫长。
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+</body>
+<script>
+    $('.line2>div').width($('.line2').parent('div').outerWidth());
+    $(".line>div:nth-child(2)").hover(function () {
+        $(this).addClass("active");
+    },function(){
+        $(this).removeClass("active");
+    });
+</script>
+<script type="text/javascript" th:src="@{/js/project/login.js}"></script>
+</html>

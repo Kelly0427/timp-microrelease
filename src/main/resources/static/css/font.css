@@ -1,0 +1,10 @@
+@font-face {
+	font-family: "Gotham";
+	src: url("./Gotham.otf");
+}
+
+.warp {
+	font-size: 14px;
+	color: #5f6062;
+	font-family: "Gotham" !important;
+}
